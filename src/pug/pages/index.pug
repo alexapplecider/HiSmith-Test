@@ -1,0 +1,12 @@
+extends ../template/main
+
+block variables
+	- var title = "Главная"
+	- var bodyClass = "index"
+
+block content
+	main.main
+		.container
+			include ../components/left-column
+			include ../components/main-view
+		include ../components/news
