@@ -5,20 +5,21 @@
 	.top-line {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		margin-bottom: 16px;
 		@media (max-width: $tablet) {
 			margin-bottom: 18px;
 		}
 		& a.logo {
 			display: flex;
-    align-items: center;
+			align-items: center;
 		}
 		&__nav {
 			display: flex;
 			align-items: center;
 			margin-right: auto;
 			margin-left: 40px;
-			@media (max-width: $tablet) {
+			@media (max-width: 950px) {
 				display: none;
 			}
 			&-list {
@@ -46,11 +47,20 @@
 				height: 104px;
 				width: 268px;
 			}
+			@media (max-width: 950px) {
+				height: initial;
+			}
 			@media (max-width: $tablet) {
 				justify-content: flex-end;
 				flex-wrap: nowrap;
 				width: initial;
 				height: initial;
+				margin-left: auto;
+				margin-right: 32px;
+			}
+			@media (max-width: $mobile) {
+				margin-right: 20px;
+				
 			}
 			&-compare {
 				color: #893b67;
@@ -58,7 +68,7 @@
 				font-size: 14px;
 				font-weight: 400;
 				line-height: 20px;
-				@media (max-width: $tablet) {
+				@media (max-width: 950px) {
 					display: none;
 				}
 			}
@@ -96,6 +106,9 @@
 				font-size: 18px;
 				font-weight: 400;
 				line-height: 20px;
+				@media (max-width: 460px) {
+					display: none;
+				}
 			}
 			&-number-phone {
 				position: relative;
@@ -139,7 +152,7 @@
 				font-size: 14px;
 				font-weight: 400;
 				line-height: 20px;
-				@media (max-width: $tablet) {
+				@media (max-width: 950px) {
 					display: none;
 				}
 				&::after {
@@ -165,7 +178,7 @@
 			height: 100%;
 		}
 		&-text {
-			width: 341px;
+			max-width: 341px;
 			color: #414141;
 			font-family: "Vida 33 Pro";
 			font-size: 48px;
@@ -192,20 +205,22 @@
 				padding-left: 18px;
 				font-size: 48px;
 				background-color: #ffffff;
+				@media (max-width: 340px) {
+					font-size: 44px;
+				}
 			}
 		}
 	}
 	.mobile-menu {
 		display: none;
-		margin-left: 30px;
-		@media (max-width: $tablet) {
+		@media (max-width: 950px) {
 			display: block;
 		}
 		&__btn {
 			display: none;
 			font-size: 3rem;
 			cursor: pointer;
-			@media (max-width: $tablet) {
+			@media (max-width: 950px) {
 				display: block;
 			}
 			& i.fa.fa-bars {
@@ -224,6 +239,7 @@
 			bottom: 0;
 			padding-left: 30px;
 			background-color: #ffffff;
+			overflow: scroll;
 			z-index: 100;
 			&--show {
 				display: block;
@@ -246,7 +262,6 @@
 			& a.logo {
 				display: inline-block;
 				margin-bottom: 115px;
-
 			}
 			& .mobile-menu__btn--open {
 				position: absolute;
@@ -354,6 +369,12 @@
 	.mobile-menu-block .top-line__contacts-number {
 		display: block;
 		font-size: 40px;
+		@media (max-width: 500px) {
+			font-size: 30px;
+		}
+		@media (max-width: 390px) {
+			font-size: 22px;
+		}
 	}
 }
 

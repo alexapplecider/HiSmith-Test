@@ -3,10 +3,14 @@ aside {
   margin-bottom: 80px;
   padding-right: 25px;
   border-right: 1px solid #f4f4f4;
+  @media (max-width: 1305px) {
+    margin-right: 30px;
+  }
   @media (max-width: $tablet) {
     width: 100%;
-    border: 0;
+    margin-right: 0px;
     padding: 0;
+    border: 0;
   }
   .aside__list {
     display: flex;
@@ -55,18 +59,22 @@ aside {
   .select-wrap {
     position: relative;
     &::after {
+      display: none;
       position: absolute;
       top: 23px;
       right: 22px;
       content: '';
       border: 5px solid transparent;
       border-top: 7px solid gray;
+      @media (max-width: $tablet) {
+        display: initial;
+      }
     }
     &__count {
+      display: none;
       position: absolute;
       top: 2px;
       left: 19%;
-      display: inline-block;
       min-width: 20px;
       min-height: 20px;
       border-radius: 50%;
@@ -77,6 +85,9 @@ aside {
       font-weight: 400;
       line-height: 20px;
       text-align: center;
+      @media (max-width: $tablet) {
+        display: inline-block;
+      }
     }
   }
   .aside__select {
@@ -94,7 +105,6 @@ aside {
     line-height: 24px;
     outline: none;
     appearance: none !important;
-    
     @media (max-width: $tablet) {
       display: initial;
     }
@@ -129,6 +139,7 @@ aside {
         margin-bottom: 0;
         border: 0;
         &:first-child {
+          margin-right: 25px;
           padding-right: 40px;
         }
         &:last-child {

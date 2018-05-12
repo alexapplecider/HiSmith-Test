@@ -89,33 +89,33 @@ $(document).ready(function () {
 	// }
 	// document.getElementById("defaultOpen").click();
 
-
 });
 
 
 
 let notBtn = document.querySelectorAll(".notification__btn");
-	notBtn.forEach(i => {
-		i.addEventListener("click", function () {
-			if (i.parentElement.classList.contains("notification--active") && i.classList.contains("notification__btn--active")) {
-				i.parentElement.classList.remove("notification--active");
-				i.classList.remove("notification__btn--active");
-				return;
-			}
-			i.parentElement.classList.add("notification--active");
-			i.classList.add("notification__btn--active");
-		});
+notBtn.forEach(i => {
+	i.addEventListener("click", function () {
+		if (i.parentElement.classList.contains("notification--active") && i.classList.contains("notification__btn--active")) {
+			i.parentElement.classList.remove("notification--active");
+			i.classList.remove("notification__btn--active");
+			return;
+		}
+		i.parentElement.classList.add("notification--active");
+		i.classList.add("notification__btn--active");
 	});
-	
-	let footHeading = document.querySelectorAll(".footer-nav__list-heading");
-	footHeading.forEach(i => {
-		i.addEventListener("click", function () {
-			if ( i.classList.contains("footer-nav__list-heading--active") && i.nextSibling.classList.contains("footer-nav__list-wrap--open") ) {
-				i.classList.remove("footer-nav__list-heading--active");
-				i.nextSibling.classList.remove("footer-nav__list-wrap--open");
-				return;
-			}
-			i.classList.add("footer-nav__list-heading--active");
-			i.nextSibling.classList.add("footer-nav__list-wrap--open");
-		});
+});
+
+let footHeading = document.querySelectorAll(".footer-nav__list");
+footHeading.forEach(i => {
+	let divWrap = i.querySelector(".footer-nav__list-wrap");
+	i.addEventListener("click", function () {
+		if ( i.classList.contains("footer-nav__list--active") && divWrap.classList.contains("footer-nav__list-wrap--open") ) {
+			i.classList.remove("footer-nav__list--active");
+			divWrap.classList.remove("footer-nav__list-wrap--open");
+			return;
+		}
+		i.classList.add("footer-nav__list--active");
+		divWrap.classList.add("footer-nav__list-wrap--open");
 	});
+});

@@ -44,6 +44,7 @@ $mobile-width: 560px;
 	}
 	@media (max-width: $mobile) {
 		max-width: $mobile-width;
+		padding: 0 4%;		
 	}
 }
 

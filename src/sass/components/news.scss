@@ -2,6 +2,7 @@
   background-color: #eeeeee;
   padding-top: 31px;
   padding-bottom: 40px;
+  overflow: hidden;
 }
 
 .news-list {
@@ -12,12 +13,28 @@
   padding: 0 4%;
   @media (max-width: $tablet) {
     padding: 0;
+    overflow-x: scroll;
   }
   &__item {
     width: 221px;
     color: #000000;
     font-family: "Vida 31 Pro";
     font-size: 14px;
+    @media (max-width: $tablet) {
+      margin-right: 78px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: $mobile) {
+      margin: 0 27px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
     &-date {
       margin-right: 7px;
       opacity: 0.4;
