@@ -6,17 +6,18 @@
 }
 
 .news-list {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 4%;
+  position: relative;
+  // display: flex;
+  // justify-content: space-between;
+  // width: 100%;
+  // margin: 0 auto;
+  // padding: 0 4%;
   @media (max-width: $tablet) {
-    padding: 0;
-    overflow-x: scroll;
+    // padding: 0;
+    // overflow-x: scroll;
   }
   &__item {
-    width: 221px;
+    // width: 221px;
     color: #000000;
     font-family: "Vida 31 Pro";
     font-size: 14px;
@@ -81,6 +82,28 @@
     }
     &-text {
       line-height: 18px;
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: -20%;
+    left: 40%;
+    color: transparent;
+    & li {
+      display: inline-block;
+      margin-right: 12px;
+    }
+    & li.slick-active button {
+      background-color: #bebebe;
+      
+    }
+    & li button {
+      width: 10px;
+      height: 13px;
+      border-radius: 50%;
+      background-color: black;
+      outline: none;
+      cursor: pointer;
     }
   }
 }

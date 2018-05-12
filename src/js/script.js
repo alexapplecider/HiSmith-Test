@@ -119,3 +119,40 @@ footHeading.forEach(i => {
 		divWrap.classList.add("footer-nav__list-wrap--open");
 	});
 });
+
+
+
+$('.slick-slider-responive').slick({
+  dots: true,
+  infinite: false,
+	speed: 1000,
+	arrows: false,
+	slidesToShow: 4,	
+	adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 0,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 0
+      }
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 1,
+				slidesToScroll: 1,
+				dots: true
+      }
+    }
+  ]
+});
