@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 	// кнопка мобильного меню
 	var mobMenuButton = $('.mobile-menu__btn'),
-			mobMenuBlock = $('.mobile-menu-block');
+		mobMenuBlock = $('.mobile-menu-block');
 	$('.mobile-menu__btn').on('click', function (event) {
 		mobMenuBlock.toggleClass('mobile-menu-block--show');
 	});
@@ -89,6 +89,63 @@ $(document).ready(function () {
 	// }
 	// document.getElementById("defaultOpen").click();
 
+	// $('.slick-slider-responive').slick({
+	// 	dots: true,
+	// 	infinite: false,
+	// 	speed: 1000,
+	// 	arrows: false,
+	// 	slidesToShow: 4,	
+	// 	adaptiveHeight: true,
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 1280,
+	// 			settings: {
+	// 				slidesToShow: 4,
+	// 				slidesToScroll: 0,
+	// 				infinite: true,
+	// 				dots: false
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 2,
+	// 				slidesToScroll: 0
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 640,
+	// 			settings: {
+	// 				slidesToShow: 1,
+	// 				slidesToScroll: 1,
+	// 				dots: true
+	// 			}
+	// 		}
+	// 	]
+	// });
+
+	// $(window).on('resize orientationchange', function() {
+	// 	$('.slick-slider-responive').slick('resize');
+	// });
+
+	$('.owl-carousel').owlCarousel({
+		// margin: 50,
+		// autoWidth: true,
+		// autoHeight:true,
+		// responsiveClass:true,
+		responsive: {
+			320: {
+				items: 1,
+			},
+			690: {
+				items: 3,
+			},
+			875: {
+				items: 4,
+			}
+		}
+	})
+
 });
 
 
@@ -110,7 +167,7 @@ let footHeading = document.querySelectorAll(".footer-nav__list");
 footHeading.forEach(i => {
 	let divWrap = i.querySelector(".footer-nav__list-wrap");
 	i.addEventListener("click", function () {
-		if ( i.classList.contains("footer-nav__list--active") && divWrap.classList.contains("footer-nav__list-wrap--open") ) {
+		if (i.classList.contains("footer-nav__list--active") && divWrap.classList.contains("footer-nav__list-wrap--open")) {
 			i.classList.remove("footer-nav__list--active");
 			divWrap.classList.remove("footer-nav__list-wrap--open");
 			return;
@@ -118,41 +175,4 @@ footHeading.forEach(i => {
 		i.classList.add("footer-nav__list--active");
 		divWrap.classList.add("footer-nav__list-wrap--open");
 	});
-});
-
-
-
-$('.slick-slider-responive').slick({
-  dots: true,
-  infinite: false,
-	speed: 1000,
-	arrows: false,
-	slidesToShow: 4,	
-	adaptiveHeight: true,
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 0,
-        infinite: true,
-        dots: false
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 0
-      }
-    },
-    {
-      breakpoint: 640,
-      settings: {
-        slidesToShow: 1,
-				slidesToScroll: 1,
-				dots: true
-      }
-    }
-  ]
 });
