@@ -89,50 +89,7 @@ $(document).ready(function () {
 	// }
 	// document.getElementById("defaultOpen").click();
 
-	// $('.slick-slider-responive').slick({
-	// 	dots: true,
-	// 	infinite: false,
-	// 	speed: 1000,
-	// 	arrows: false,
-	// 	slidesToShow: 4,	
-	// 	adaptiveHeight: true,
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 1280,
-	// 			settings: {
-	// 				slidesToShow: 4,
-	// 				slidesToScroll: 0,
-	// 				infinite: true,
-	// 				dots: false
-	// 			}
-	// 		},
-	// 		{
-	// 			breakpoint: 768,
-	// 			settings: {
-	// 				slidesToShow: 2,
-	// 				slidesToScroll: 0
-	// 			}
-	// 		},
-	// 		{
-	// 			breakpoint: 640,
-	// 			settings: {
-	// 				slidesToShow: 1,
-	// 				slidesToScroll: 1,
-	// 				dots: true
-	// 			}
-	// 		}
-	// 	]
-	// });
-
-	// $(window).on('resize orientationchange', function() {
-	// 	$('.slick-slider-responive').slick('resize');
-	// });
-
 	$('.owl-carousel').owlCarousel({
-		// margin: 50,
-		// autoWidth: true,
-		// autoHeight:true,
-		// responsiveClass:true,
 		responsive: {
 			320: {
 				items: 1,

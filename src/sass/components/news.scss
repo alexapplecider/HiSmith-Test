@@ -6,37 +6,16 @@
 }
 
 .news-list {
-  position: relative; // display: flex;
-  // justify-content: space-between;
-  // width: 100%;
-  // margin: 0 auto;
-  // padding: 0 4%;
-  // @media (max-width: $tablet) {
-  // padding: 0;
-  // overflow-x: scroll;
-  // }
+  position: relative;
   &__item {
     width: 221px;
     margin: 0 auto;
     color: #000000;
     font-family: "Vida 31 Pro";
     font-size: 14px;
-    outline: none; // @media (max-width: $tablet) {
-    // max-width: initial; 
-    //   margin-right: 78px;
-    //   &:last-child {
-    //     margin-right: 0;
-    //   }
-    // }
+    outline: none; 
     @media (max-width: 690px) {
-      width: initial; 
-      //   margin: 0 27px;
-      //   &:first-child {
-      //     margin-left: 0;
-      //   }
-      //   &:last-child {
-      //     margin-right: 0;
-      //   }
+      width: initial;
     }
     &-date {
       margin-right: 7px;
@@ -92,16 +71,19 @@
   }
   & .owl-dots {
     display: none;
-    position: absolute;
-    bottom: -25px;
-    left: 40%;
+    margin-top: 17px;
+    align-self: center;
     color: transparent;
     @media (max-width: $tablet) {
-      display: initial;
+      display: flex;
+      justify-content: center;
     }
     & button {
       display: inline-block;
       margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
     & button.owl-dot.active {
       background-color: #bebebe;
@@ -114,15 +96,5 @@
       outline: none;
       cursor: pointer;
     }
-  } // & .slick-list .slick-track {
-  //   display: flex!important;
-  //   justify-content: space-between!important;
-  //   @media (max-width: $tablet) {
-  //     display: initial;
-  //   }
-  // }
+  }
 }
-
-// .owl-reponsive-1440 .owl-item {
-//   max-width: 221px;
-// }
