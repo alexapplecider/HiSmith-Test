@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 	// кнопка мобильного меню
 	var mobMenuButton = $('.mobile-menu__btn'),
-		mobMenuBlock = $('.mobile-menu-block');
+			mobMenuBlock = $('.mobile-menu-block');
 	$('.mobile-menu__btn').on('click', function (event) {
 		mobMenuBlock.toggleClass('mobile-menu-block--show');
 	});
